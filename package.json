@@ -1,7 +1,14 @@
 {
+  "author": {
+    "name": "Mike Shauneu",
+    "email": "m.shauneu@gmail.om"
+  },
   "scripts": {
     "compile": "npx hardhat compile",
-    "test": "npx hardhat test"
+    "test": "npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "clean": "npx hardhat clean",
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.3",
