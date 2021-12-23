@@ -1,5 +1,6 @@
 import '@nomiclabs/hardhat-waffle';
 import '@typechain/hardhat';
+import '@nomiclabs/hardhat-solhint';
 import 'solidity-coverage';
 import { HardhatUserConfig } from 'hardhat/config';
 

@@ -23,6 +23,12 @@ npx hardhat compile
 npx hardhat test
 ```
 
+## Check
+
+```shell
+npx hardhat check
+```
+
 ## Coverage
 
 ```shell
