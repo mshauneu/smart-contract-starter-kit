@@ -23,18 +23,30 @@ npx hardhat compile
 npx hardhat test
 ```
 
-## Deploy
+## Coverage
+
+```shell
+npx hardhat coverage
+```
+
+## Play
+
+Make sure `Ganache UI` ran.
+![init](/docs/init.png)
+
+### Deploy
 
 ```shell
 export VM_ADDRESS=$(npx hardhat --network ganache deploy --contract VendingMachine)
 ```
 
-## Exec
+![deploy](/docs/deploy.png)
+
+### Exec
 
 ```shell
 npx hardhat --network ganache exec:vm --address $VM_ADDRESS
-
-BigNumber { value: "0" }
-BigNumber { value: "10" }
-BigNumber { value: "690" }
 ```
+
+![exec-tx](/docs/exec-1.png)
+![exec](/docs/exec-2.png)
