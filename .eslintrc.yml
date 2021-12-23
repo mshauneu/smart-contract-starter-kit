@@ -1,0 +1,15 @@
+extends:
+  - "eslint:recommended"
+  - "plugin:@typescript-eslint/eslint-recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "airbnb-base-typescript"
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project: "tsconfig.json"
+plugins:
+  - "@typescript-eslint"
+root: true
+rules:
+  no-console: off
+  import/no-extraneous-dependencies: off
+
