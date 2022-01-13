@@ -1,9 +1,6 @@
 # Basic Sample Hardhat Project
 
 This project demonstrates a basic Hardhat use case.
-It comes with a sample contract (*VendingMachine*), a test for that contract,
-a sample script that deploys that contract,
-and an example of a task implementations.
 
 ## Init
 
@@ -43,7 +40,7 @@ Make sure `Ganache UI` ran.
 ### Deploy
 
 ```shell
-export VM_ADDRESS=$(npx hardhat --network ganache deploy --contract VendingMachine)
+export VM_ADDRESS=$(npx hardhat --network ganache deploy:vm)
 ```
 
 ![deploy](/docs/deploy.png)
@@ -56,3 +53,9 @@ npx hardhat --network ganache exec:vm --address $VM_ADDRESS
 
 ![exec-tx](/docs/exec-1.png)
 ![exec](/docs/exec-2.png)
+
+## TatooineCoin (TC) ICO
+
+```shell
+npx hardhat --network ganache deploy:tc
+```
