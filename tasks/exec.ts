@@ -31,3 +31,15 @@ task('exec:tc', 'Execute TatooineCoin balances')
       console.log(`${accounts[i]} - ${Math.round(+ethers.utils.formatEther(balances[i]))}`);
     }
   });
+
+task('exec:voting', 'Execute voting')
+  .addParam('address', 'The contract address')
+  .setAction(async (ta, { ethers }) => {
+    const signers = await ethers.getSigners();
+    const factory = await ethers.getContractFactory('Voting');
+    const contract = factory.attach(ta.address);
+    let tx = await contract.connect(signers[0]).voteAlpha();
+    let cr = await tx.wait();
+    console.log(cr);
+  });
+  

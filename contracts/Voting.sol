@@ -2,8 +2,11 @@
 pragma solidity >= 0.8.1;
 
 contract Voting {
+  
     int256 alpha;
     int256 beta;
+
+    event Vote(address indexed from, int256 value);
 
     constructor() {
         alpha = 0;
@@ -20,9 +23,11 @@ contract Voting {
 
     function voteAlpha() public {
         alpha = alpha + 1;
+        emit Vote(msg.sender, alpha);
     }
 
     function voteBeta() public {
         beta = beta + 1;
+        emit Vote(msg.sender, beta);
     }
 }
