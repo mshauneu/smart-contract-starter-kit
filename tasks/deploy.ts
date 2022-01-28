@@ -3,25 +3,16 @@ import { task } from 'hardhat/config';
 
 task('deploy:vm', 'Deploy')
   .setAction(async (_ta, { ethers }) => {
-    const factory = await ethers.getContractFactory("VendingMachine");
-    const contract = await factory.deploy();
-    await contract.deployed();
-    console.log(contract.address);
+    const VM = await ethers.getContractFactory("VendingMachine");
+    const vm = await VM.deploy();
+    await vm.deployed();
+    console.log(vm.address);
   });
 
 task('deploy:voting', 'Deploy')
   .setAction(async (_ta, { ethers }) => {
-    const factory = await ethers.getContractFactory("Voting");
-    const contract = await factory.deploy();
-    await contract.deployed();
-    console.log(contract.address);
+    const Voting = await ethers.getContractFactory("Voting");
+    const voting = await Voting.deploy();
+    await voting.deployed();
+    console.log(voting.address);
   });
-
-task('deploy:tc', 'Deploy')
-  .setAction(async (_ta, { ethers }) => {
-    const factory = await ethers.getContractFactory("TatooineCoin");
-    const contract = await factory.deploy();
-    await contract.deployed();
-    console.log(contract.address);
-  });
-

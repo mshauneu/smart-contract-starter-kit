@@ -53,9 +53,3 @@ npx hardhat --network ganache exec:vm --address $VM_ADDRESS
 
 ![exec-tx](/docs/exec-1.png)
 ![exec](/docs/exec-2.png)
-
-## TatooineCoin (TC) ICO
-
-```shell
-npx hardhat --network ganache deploy:tc
-```

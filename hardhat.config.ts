@@ -8,6 +8,7 @@ import './tasks/accounts';
 import './tasks/balances';
 import './tasks/deploy';
 import './tasks/exec';
+import './tasks/swap';
 
 const config: HardhatUserConfig = {
   paths: {
@@ -28,7 +29,13 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  networks: {
+  networks: {    
+    n1: {
+      url: 'http://127.0.0.1:8515',
+    },
+    n2: {
+      url: 'http://127.0.0.1:8525',
+    },
     ganache: {
       url: 'http://127.0.0.1:7545',
     },
